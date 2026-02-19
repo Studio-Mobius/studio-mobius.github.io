@@ -6,9 +6,9 @@
 <style>
 body {
   margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
-  background: #111;
-  color: #eee;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  background: #0f1114;
+  color: #e6e6e6;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,32 +16,45 @@ body {
   text-align: center;
 }
 .container {
-  max-width: 600px;
+  max-width: 640px;
+  padding: 20px;
 }
 h1 {
-  font-weight: 300;
-  letter-spacing: 2px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
-a {
-  color: #8be28b;
-  text-decoration: none;
-  display: block;
+.tagline {
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+.section {
   margin: 12px 0;
+  font-size: 14px;
+  opacity: 0.65;
 }
-a:hover {
-  opacity: 0.7;
+.footer {
+  margin-top: 50px;
+  font-size: 12px;
+  opacity: 0.4;
 }
 </style>
 </head>
 <body>
 <div class="container">
   <h1>Studio Möbius</h1>
-  <p>Terrain Intelligence · Landscape Design · Spatial Systems</p>
+  <div class="tagline">
+    Terrain Intelligence · Landscape Design · Spatial Systems
+  </div>
 
-  <a href="https://github.com/Studio-Mobius/Studio-GIS">Studio GIS</a>
-  <a href="https://github.com/Studio-Mobius/CBH-Website">Cosmic Bowel Hypothesis</a>
-  <a href="#">Writing</a>
-  <a href="#">Contact</a>
+  <div class="section">GIS & Environmental Analysis</div>
+  <div class="section">Coastal & Terrain Change Assessment</div>
+  <div class="section">Landscape Strategy & Design</div>
+
+  <div class="footer">
+    United Kingdom
+  </div>
 </div>
 </body>
 </html>
