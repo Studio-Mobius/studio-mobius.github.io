@@ -2,62 +2,81 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Studio Möbius</title>
 <style>
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-  background: #0f1114;
-  color: #e6e6e6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
+:root{
+  --bg: #0f1114;
+  --fg: #e6e6e6;
 }
-.container {
-  max-width: 640px;
-  padding: 20px;
+
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  background: radial-gradient(1200px 600px at 50% 20%, #151a20 0%, var(--bg) 55%);
+  color:var(--fg);
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;          /* 👈 stop floating in the middle */
+  text-align:center;
 }
-h1 {
-  font-weight: 400;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
+
+.container{
+  width:min(760px, 92vw);
+  padding:56px 20px 48px;
+  margin-top:6vh;                  /* 👈 anchor higher, still breathable */
 }
-.tagline {
-  font-size: 16px;
-  opacity: 0.8;
-  margin-bottom: 40px;
+
+h1{
+  font-weight:500;
+  letter-spacing:0.5px;
+  margin:0 0 12px 0;
+  font-size:clamp(34px, 6vw, 52px);  /* 👈 bigger, responsive */
 }
-.section {
-  margin: 12px 0;
-  font-size: 14px;
-  opacity: 0.65;
+
+.tagline{
+  font-size:clamp(16px, 2.6vw, 19px);
+  opacity:0.85;
+  margin:0 auto 34px;
+  line-height:1.35;
 }
-.footer {
-  margin-top: 50px;
-  font-size: 12px;
-  opacity: 0.4;
+
+.rule{
+  width:min(480px, 78vw);
+  margin:0 auto 26px;
+  height:1px;
+  background:rgba(230,230,230,0.14);
+}
+
+.section{
+  font-size:clamp(15px, 2.4vw, 17px);
+  opacity:0.72;
+  margin:14px 0;
+  line-height:1.35;
+}
+
+.footer{
+  margin-top:44px;
+  font-size:13px;
+  opacity:0.45;
+  letter-spacing:0.2px;
 }
 </style>
 </head>
+
 <body>
-<div class="container">
-  <h1>Studio Möbius</h1>
-  <div class="tagline">
-    Terrain Intelligence · Landscape Design · Spatial Systems
-  </div>
+  <div class="container">
+    <h1>Studio Möbius</h1>
+    <div class="tagline">Terrain Intelligence · Landscape Design · Spatial Systems</div>
 
-  <div class="section">GIS & Environmental Analysis</div>
-  <div class="section">Coastal & Terrain Change Assessment</div>
-  <div class="section">Landscape Strategy & Design</div>
+    <div class="rule"></div>
 
-  <div class="footer">
-    United Kingdom
+    <div class="section">GIS & Environmental Analysis</div>
+    <div class="section">Coastal & Terrain Change Assessment</div>
+    <div class="section">Landscape Strategy & Design</div>
+
+    <div class="footer">United Kingdom</div>
   </div>
-  <p style="color:#cfcfcf; opacity:0.7; font-size:12px; margin-top:16px;">
-  Updated from Studio-Möbius Mobile.
-</p>
-</div>
 </body>
 </html>
