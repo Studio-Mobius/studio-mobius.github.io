@@ -17,61 +17,37 @@ body {
     align-items: center;
     height: 100vh;
     text-align: center;
-    position: relative;   /* ← add this line */
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    align-items: center;
+    gap: 2rem;
 }
 
-h1 {
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    margin: 0;
-    font-size: 2.2rem;
+.logo {
+    width: 340px;   /* ← larger */
+    max-width: 70vw; /* responsive */
+    height: auto;
+    opacity: 0.95;
 }
 
-h2 {
+.tagline {
     color: #b8c0c8;
     font-weight: 400;
-    margin: 0;
     font-size: 1.2rem;
-}
-
-p {
-    color: #8c97a3;
-    margin: 0;
-    font-size: 0.95rem;
-}
-
-/* Bottom stamp logo */
-.stamp {
-    position: absolute;
-    bottom: 40px;
-    width: 120px;
-    opacity: 0.85;
+    letter-spacing: 0.6px;
 }
 </style>
-
 </head>
+
 <body>
 
 <div class="container">
-    <h1>Studio Möbius</h1>
-    <h2>Terrain Intelligence</h2>
-    <p>United Kingdom</p>
-</div>
-<div class="container">
-    <h1>Studio Möbius</h1>
-    <h2>Terrain Intelligence</h2>
-    <p>United Kingdom</p>
+    <img src="images/logo.png" class="logo" alt="Studio Möbius Logo">
+    <div class="tagline">Terrain Intelligence</div>
 </div>
 
-<img src="images/logo.png" class="stamp" alt="Studio Möbius Logo">
-
-</body>
-</html>
 </body>
 </html>
