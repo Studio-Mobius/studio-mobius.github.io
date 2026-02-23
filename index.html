@@ -17,6 +17,7 @@ body {
     align-items: center;
     height: 100vh;
     text-align: center;
+    position: relative;   /* ← add this line */
 }
 
 .container {
@@ -44,6 +45,14 @@ p {
     margin: 0;
     font-size: 0.95rem;
 }
+
+/* Bottom stamp logo */
+.stamp {
+    position: absolute;
+    bottom: 40px;
+    width: 120px;
+    opacity: 0.85;
+}
 </style>
 
 </head>
@@ -54,6 +63,15 @@ p {
     <h2>Terrain Intelligence</h2>
     <p>United Kingdom</p>
 </div>
+<div class="container">
+    <h1>Studio Möbius</h1>
+    <h2>Terrain Intelligence</h2>
+    <p>United Kingdom</p>
+</div>
 
+<img src="images/logo.png" class="stamp" alt="Studio Möbius Logo">
+
+</body>
+</html>
 </body>
 </html>
