@@ -54,12 +54,25 @@ body {
 .penguin {
     margin-top: 40px;
 }
+
 .tux {
     width: 32px;
     height: auto;
+    cursor: pointer;
     filter:
-        drop-shadow(0 0 10px rgba(160,200,255,0.45))
-        drop-shadow(0 0 25px rgba(120,170,255,0.25));
+        drop-shadow(0 0 8px rgba(160,200,255,0.45))
+        drop-shadow(0 0 18px rgba(120,170,255,0.25));
+}
+
+.penguin-poo {
+    font-size: 11px;
+    margin-top: 8px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.penguin:hover .penguin-poo {
+    opacity: 0.5;
 }
 
 </style>
