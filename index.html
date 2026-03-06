@@ -77,26 +77,29 @@ body {
     -webkit-user-select: none;
     -webkit-user-drag: none;
     user-select: none;
-}
-
 .penguin-poo {
-    font-family: "Cormorant Garamond", serif;
 
+    font-family: "Cormorant Garamond", serif;
     font-size: 12px;
+
     margin-top: 8px;
 
-    font-style: italic;
     letter-spacing: 0.6px;
-
     color: #aab3bd;
 
     opacity: 0;
-    transition: opacity 1.4s ease;
+
+    transition: opacity 2.8s ease;
 }
 
-.penguin:hover .penguin-poo {
-    opacity: 0.45;   /* slightly stronger but still subtle */
-    transition-delay: 1.2s;
+/* slow reveal after page loads */
+
+.penguin-poo.reveal {
+    opacity: 0.45;
+}
+
+/* hover boost */
+
 }
 filter:
 drop-shadow(0 0 6px rgba(160,200,255,0.35))
