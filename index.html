@@ -14,7 +14,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
 }
 
@@ -23,11 +23,12 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    padding: 2rem 1.5rem;
 }
 
 .logo {
-    width: 400px;   /* ← larger */
-    max-width: 75vw; /* responsive */
+    width: 400px;
+    max-width: 75vw;
     height: auto;
     opacity: 0.75;
     -webkit-touch-callout: none;
@@ -39,25 +40,29 @@ body {
 .tagline {
     color: #b8c0c8;
     font-weight: 400;
-    font-size: 2.0rem;
+    font-size: 2rem;
     letter-spacing: 0.6px;
 }
+
 .services {
     color: #b8c0c8;
     font-size: 14px;
     letter-spacing: 1px;
-    margin-top: 40px;
+    margin-top: 10px;
     opacity: 0.85;
+    line-height: 1.5;
+    max-width: 90vw;
 }
+
 .contact {
     font-size: 13px;
-    margin-top: 18px;
+    margin-top: 10px;
     opacity: 0.65;
 }
-.penguin {
-    margin-top: 40px;
-    -webkit-touch-callout: none;
 
+.penguin {
+    margin-top: 20px;
+    -webkit-touch-callout: none;
 }
 
 .tux {
@@ -69,51 +74,44 @@ body {
         drop-shadow(0 0 18px rgba(120,170,255,0.25));
     -webkit-touch-callout: none;
     -webkit-user-select: none;
-    user-select: none;
     -webkit-user-drag: none;
+    user-select: none;
+}
 
 .penguin-poo {
     font-size: 10px;
     margin-top: 8px;
-
     font-style: italic;
     letter-spacing: 0.4px;
-
-    color: #9aa3ad;   /* softer grey */
-
+    color: #9aa3ad;
     opacity: 0;
     transition: opacity 1.4s ease;
 }
 
 .penguin:hover .penguin-poo {
-    opacity: 0.28;     /* much softer */
+    opacity: 0.22;
     transition-delay: 1.2s;
 }
-
 </style>
 </head>
 
 <body>
-
 <div class="container">
     <img src="images/logo.png" class="logo" draggable="false" alt="">
     <div class="tagline">Terrain Intelligence</div>
+
     <div class="services">
         GIS Modelling · Coastal Change Analysis · Environmental Terrain Visualisation
     </div>
+
     <div class="penguin">
-    <img src="images/Tux.png" class="tux" draggable="false" alt="">
-    <div class="penguin-poo">
-    <em>Stercore pinguini agitur.</em>
-</div>
+        <img src="images/Tux.png" class="tux" draggable="false" alt="">
+        <div class="penguin-poo">Stercore pinguini agitur.</div>
     </div>
 
     <div class="contact">
         contact@studiomobius.co.uk
     </div>
 </div>
-
-</div>
 </body>
-
 </html>
