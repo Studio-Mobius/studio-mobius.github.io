@@ -1,104 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio Möbius</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Studio Möbius</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400&display=swap" rel="stylesheet">
-
-<style>
-
-body {
-
-    background:
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #e6e9ed;
+      background:
         radial-gradient(circle at center,
-        #323842 0%,
-        #2a2f36 55%,
-        #1e2329 100%);
+          #323842 0%,
+          #2a2f36 55%,
+          #1e2329 100%);
+    }
 
-    color:#e6e9ed;
+    .container {
+      width: 100%;
+      max-width: 760px;
+      padding: 2rem 1.25rem 2.5rem;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
 
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    .logo {
+      width: 420px;
+      max-width: 78vw;
+      height: auto;
+      opacity: 0.76;
+      filter: drop-shadow(0 8px 18px rgba(0,0,0,0.35));
+      -webkit-user-drag: none;
+      user-select: none;
+    }
 
-    margin:0;
+    .tagline {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 300;
+      color: #c4ccd4;
+      line-height: 1.1;
+    }
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    .services {
+      max-width: 620px;
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+      line-height: 1.55;
+      letter-spacing: 0.8px;
+      color: #aeb7c0;
+      opacity: 0.88;
+    }
 
-    min-height:100vh;
+    .stamp-wrap {
+      margin-top: 0.8rem;
+      transform: rotate(-8deg);
+      opacity: 0.72;
+    }
 
-    text-align:center;
+    .stamp {
+      width: 210px;
+      height: 210px;
+      border: 6px solid rgba(210, 216, 224, 0.55);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      box-shadow:
+        inset 0 0 8px rgba(255,255,255,0.04),
+        0 0 12px rgba(0,0,0,0.28);
+      background: rgba(255,255,255,0.01);
+    }
 
-}
+    .stamp-top,
+    .stamp-bottom {
+      font-family: "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+      text-transform: uppercase;
+      color: rgba(214, 220, 228, 0.78);
+    }
 
-/* main layout */
+    .stamp-top {
+      font-size: 18px;
+      letter-spacing: 5px;
+      margin-bottom: 0.5rem;
+    }
 
-.container {
+    .stamp-bottom {
+      font-size: 13px;
+      letter-spacing: 3px;
+      margin-top: 0.55rem;
+    }
 
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+    .tux {
+      width: 72px;
+      height: auto;
+      filter: grayscale(1) contrast(1.18) brightness(1.04);
+      opacity: 0.9;
+      -webkit-user-drag: none;
+      user-select: none;
+    }
 
-    gap:2rem;
+    .contact {
+      margin-top: 0.25rem;
+      font-size: 0.98rem;
+      color: #b8c0c8;
+      opacity: 0.68;
+      letter-spacing: 0.3px;
+    }
 
-    padding:2rem;
+    @media (max-width: 640px) {
+      .stamp {
+        width: 180px;
+        height: 180px;
+      }
 
-}
+      .stamp-top {
+        font-size: 15px;
+        letter-spacing: 4px;
+      }
 
-/* logo */
+      .stamp-bottom {
+        font-size: 11px;
+        letter-spacing: 2.4px;
+      }
 
-.logo {
+      .tux {
+        width: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="images/logo.png" class="logo" draggable="false" alt="Studio Möbius logo">
 
-    width:420px;
-    max-width:80vw;
+    <div class="tagline">Terrain Intelligence</div>
 
-    opacity:.75;
+    <div class="services">
+      GIS Modelling · Coastal Change Analysis · Environmental Terrain Visualisation
+    </div>
 
-    filter:drop-shadow(0 8px 18px rgba(0,0,0,.35));
+    <div class="stamp-wrap">
+      <div class="stamp">
+        <div class="stamp-top">Linux</div>
+        <img src="images/Tux.png" class="tux" draggable="false" alt="Linux penguin">
+        <div class="stamp-bottom">Approved</div>
+      </div>
+    </div>
 
-}
-
-/* tagline */
-
-.tagline {
-
-    font-size:2rem;
-    color:#b8c0c8;
-
-}
-
-/* services */
-
-.services {
-
-    font-size:14px;
-    letter-spacing:1px;
-
-    color:#b8c0c8;
-
-    opacity:.85;
-
-}
-
-/* contact */
-
-.contact {
-
-    font-size:13px;
-    opacity:.65;
-
-}
-
-/* linux stamp */
-
-.linux-seal {
-
-    margin-top:20px;
-
-    padding:18px 24px;
-
-    border:1px solid rgba(170,180,190,.25);
+    <div class="contact">contact@studiomobius.co.uk</div>
+  </div>
+</body>
+</html>
