@@ -60,13 +60,13 @@ body {
 .stamp-wrap {
     margin-top: 1rem;
     transform: rotate(-8deg);
-    opacity: 0.8;
+    opacity: 0.82;
 }
 
 .stamp {
     position: relative;
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
 }
 
 .stamp svg {
@@ -76,22 +76,17 @@ body {
     display: block;
 }
 
-.stamp-guide {
-    fill: none;
-    stroke: none;
-}
-
 .stamp text {
-    fill: rgba(210,216,224,0.78);
-    font-size: 14px;
-    letter-spacing: 1px;
+    fill: rgba(210,216,224,0.82);
+    font-size: 12px;
+    letter-spacing: 0.9px;
     font-family: "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
     text-transform: uppercase;
 }
 
 .tux {
     position: absolute;
-    width: 32px;
+    width: 34px;
     height: auto;
     left: 50%;
     top: 50%;
@@ -112,17 +107,17 @@ body {
 
 @media (max-width: 640px) {
     .stamp {
-        width: 110px;
-        height: 110px;
+        width: 130px;
+        height: 130px;
     }
 
     .stamp text {
-        font-size: 12px;
-        letter-spacing: 0.8px;
+        font-size: 11px;
+        letter-spacing: 0.7px;
     }
 
     .tux {
-        width: 26px;
+        width: 32px;
     }
 }
 </style>
@@ -143,21 +138,15 @@ body {
         <div class="stamp">
             <svg viewBox="0 0 300 300" aria-label="Linux stamp">
                 <defs>
+                    <!-- path starts at TOP of circle -->
                     <path id="circlePath"
-                          d="M150,150
-                             m-48,0
-                             a48,48 0 1,1 96,0
-                             a48,48 0 1,1 -96,0" />
+                          d="M150,92
+                             a58,58 0 1,1 0,116
+                             a58,58 0 1,1 0,-116" />
                 </defs>
 
-                <path class="stamp-guide"
-                      d="M150,150
-                         m-48,0
-                         a48,48 0 1,1 96,0
-                         a48,48 0 1,1 -96,0" />
-
                 <text>
-                    <textPath href="#circlePath" startOffset="25%" text-anchor="middle">
+                    <textPath href="#circlePath" startOffset="0%">
                         LINUX • STERCORE PINGUINI AGITUR •
                     </textPath>
                 </text>
