@@ -65,40 +65,56 @@ body {
     margin-top: 10px;
     opacity: 0.65;
 }
+.penguin {
+    margin-top: 40px;
+}
 
-<div class="penguin">
-    <div class="linux-seal">
-        <img src="images/Tux.png" class="tux" draggable="false" alt="">
-        <div class="penguin-poo">Stercore pinguini agitur.</div>
-    </div>
-</div>
+/* stamp seal */
+
+.linux-seal {
+
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 22px;
+
+    border: 1px solid rgba(170,180,190,0.28);
+    border-radius: 120px;
+
+    transform: rotate(-4deg);
+
+    background: rgba(255,255,255,0.02);
+
+    box-shadow:
+        inset 0 0 12px rgba(255,255,255,0.03),
+        0 0 8px rgba(0,0,0,0.25);
+
+    opacity: 0.75;
+}
+
+/* tux */
 
 .tux {
-    width: 25px;
+    width: 34px;
     height: auto;
-    cursor: pointer;
-    filter:
-        drop-shadow(0 0 8px rgba(160,200,255,0.45))
-        drop-shadow(0 0 18px rgba(120,170,255,0.25));
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -webkit-user-drag: none;
-    user-select: none;
+    margin-bottom: 6px;
+
+    filter: grayscale(40%) contrast(110%);
+}
+
+/* latin text */
+
 .penguin-poo {
 
     font-family: "Cormorant Garamond", serif;
-    font-size: 10px;
-    margin-top: 8px;
-    letter-spacing: 0.6px;
-    color: #aab3bd;
-    opacity: 65;
-    transition: opacity 2.8s ease;
-}
+    font-size: 12px;
 
-/* slow reveal after page loads */
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
 
-.penguin-poo.reveal {
-    opacity: 0.35;
+    color: rgba(190,200,210,0.75);
 }
 
 /* hover boost */
@@ -120,10 +136,12 @@ filter: drop-shadow(0 8px 18px rgba(0,0,0,0.35));
         GIS Modelling · Coastal Change Analysis · Environmental Terrain Visualisation
     </div>
 
-    <div class="penguin">
+<div class="penguin">
+    <div class="linux-seal">
         <img src="images/Tux.png" class="tux" draggable="false" alt="">
         <div class="penguin-poo">Stercore pinguini agitur.</div>
     </div>
+</div>
 
     <div class="contact">
         contact@studiomobius.co.uk
