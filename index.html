@@ -1,163 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Studio Möbius</title>
 
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #e6e9ed;
-      background:
-        radial-gradient(circle at center,
-          #323842 0%,
-          #2a2f36 55%,
-          #1e2329 100%);
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .container {
-      width: 100%;
-      max-width: 760px;
-      padding: 2rem 1.25rem 2.5rem;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
-    }
+<title>Studio Möbius</title>
 
-    .logo {
-      width: 420px;
-      max-width: 78vw;
-      height: auto;
-      opacity: 0.76;
-      filter: drop-shadow(0 8px 18px rgba(0,0,0,0.35));
-      -webkit-user-drag: none;
-      user-select: none;
-    }
+<style>
 
-    .tagline {
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 300;
-      color: #c4ccd4;
-      line-height: 1.1;
-    }
+body{
+margin:0;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+color:#e6e9ed;
 
-    .services {
-      max-width: 620px;
-      font-size: clamp(0.95rem, 2vw, 1.1rem);
-      line-height: 1.55;
-      letter-spacing: 0.8px;
-      color: #aeb7c0;
-      opacity: 0.88;
-    }
+background:
+radial-gradient(circle at center,
+#323842 0%,
+#2a2f36 55%,
+#1e2329 100%);
+}
 
-    .stamp-wrap {
-      margin-top: 0.8rem;
-      transform: rotate(-8deg);
-      opacity: 0.72;
-    }
+.container{
+width:100%;
+max-width:760px;
+padding:2rem;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:1.6rem;
+}
 
-    .stamp {
-      width: 210px;
-      height: 210px;
-      border: 6px solid rgba(210, 216, 224, 0.55);
-      border-radius: 50%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      box-sizing: border-box;
-      box-shadow:
-        inset 0 0 8px rgba(255,255,255,0.04),
-        0 0 12px rgba(0,0,0,0.28);
-      background: rgba(255,255,255,0.01);
-    }
+.logo{
+width:420px;
+max-width:80vw;
+opacity:.75;
+filter:drop-shadow(0 8px 18px rgba(0,0,0,.35));
+}
 
-    .stamp-top,
-    .stamp-bottom {
-      font-family: "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
-      text-transform: uppercase;
-      color: rgba(214, 220, 228, 0.78);
-    }
+.tagline{
+font-size:clamp(2rem,5vw,3rem);
+font-weight:300;
+color:#c4ccd4;
+}
 
-    .stamp-top {
-      font-size: 18px;
-      letter-spacing: 5px;
-      margin-bottom: 0.5rem;
-    }
+.services{
+max-width:620px;
+font-size:clamp(.95rem,2vw,1.1rem);
+line-height:1.55;
+letter-spacing:.8px;
+color:#aeb7c0;
+opacity:.88;
+}
 
-    .stamp-bottom {
-      font-size: 13px;
-      letter-spacing: 3px;
-      margin-top: 0.55rem;
-    }
+/* STAMP */
 
-    .tux {
-      width: 72px;
-      height: auto;
-      filter: grayscale(1) contrast(1.18) brightness(1.04);
-      opacity: 0.9;
-      -webkit-user-drag: none;
-      user-select: none;
-    }
+.stamp-wrap{
+margin-top:1rem;
+transform:rotate(-7deg);
+opacity:.75;
+}
 
-    .contact {
-      margin-top: 0.25rem;
-      font-size: 0.98rem;
-      color: #b8c0c8;
-      opacity: 0.68;
-      letter-spacing: 0.3px;
-    }
+.stamp{
+width:240px;
+height:240px;
+}
 
-    @media (max-width: 640px) {
-      .stamp {
-        width: 180px;
-        height: 180px;
-      }
+.stamp svg{
+width:100%;
+height:100%;
+}
 
-      .stamp-top {
-        font-size: 15px;
-        letter-spacing: 4px;
-      }
+/* ring */
 
-      .stamp-bottom {
-        font-size: 11px;
-        letter-spacing: 2.4px;
-      }
+.stamp circle{
+fill:none;
+stroke:rgba(210,216,224,.55);
+stroke-width:6;
+}
 
-      .tux {
-        width: 60px;
-      }
-    }
-  </style>
+/* curved text */
+
+.stamp text{
+fill:rgba(210,216,224,.75);
+font-size:16px;
+letter-spacing:3px;
+font-family:"Arial Narrow","Helvetica Neue",Arial,sans-serif;
+}
+
+/* tux */
+
+.tux{
+position:absolute;
+width:70px;
+transform:translate(-50%,-50%);
+left:50%;
+top:50%;
+filter:grayscale(1) contrast(1.2);
+opacity:.9;
+}
+
+/* contact */
+
+.contact{
+margin-top:8px;
+font-size:.98rem;
+color:#b8c0c8;
+opacity:.68;
+}
+
+</style>
+
 </head>
+
+
 <body>
-  <div class="container">
-    <img src="images/logo.png" class="logo" draggable="false" alt="Studio Möbius logo">
 
-    <div class="tagline">Terrain Intelligence</div>
+<div class="container">
 
-    <div class="services">
-      GIS Modelling · Coastal Change Analysis · Environmental Terrain Visualisation
-    </div>
+<img src="images/logo.png" class="logo" alt="Studio Möbius">
 
-    <div class="stamp-wrap">
-      <div class="stamp">
-        <div class="stamp-top">Linux</div>
-        <img src="images/Tux.png" class="tux" draggable="false" alt="Linux penguin">
-        <div class="stamp-bottom">Approved</div>
-      </div>
-    </div>
+<div class="tagline">Terrain Intelligence</div>
 
-    <div class="contact">contact@studiomobius.co.uk</div>
-  </div>
+<div class="services">
+GIS Modelling · Coastal Change Analysis · Environmental Terrain Visualisation
+</div>
+
+
+<div class="stamp-wrap">
+
+<div class="stamp">
+
+<svg viewBox="0 0 300 300">
+
+<defs>
+
+<path id="circlePath"
+d="
+M150,150
+m-110,0
+a110,110 0 1,1 220,0
+a110,110 0 1,1 -220,0
+"/>
+
+</defs>
+
+<circle cx="150" cy="150" r="110"/>
+
+<text>
+
+<textPath href="#circlePath" startOffset="50%" text-anchor="middle">
+
+LINUX • STERCORE PINGUINI AGITUR
+
+</textPath>
+
+</text>
+
+</svg>
+
+<img src="images/Tux.png" class="tux" alt="Linux Penguin">
+
+</div>
+
+</div>
+
+
+<div class="contact">
+contact@studiomobius.co.uk
+</div>
+
+</div>
+
 </body>
 </html>
